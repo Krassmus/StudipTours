@@ -1,6 +1,6 @@
 <?php
 
-require_once dirname(__file__)."/classes/JoyrideTours.class.php";
+require_once dirname(__file__)."/classes/Tours.class.php";
 
 class StudipTours extends StudIPPlugin implements SystemPlugin {
     
@@ -41,7 +41,7 @@ class StudipTours extends StudIPPlugin implements SystemPlugin {
     protected function initTour($file) {
         $script = str_replace("__", "/", $file);
         $script = substr($script, 0, strlen($script) - 4);
-        $tour_done = JoyrideTours::getByScript($script);
+        $tour_done = Tours::getByScript($script);
         
         PageLayout::addHeadElement("link", array('rel' => "stylesheet", 'href' => $this->getPluginURL()."/assets/joyride-2.0.3.css"));
         PageLayout::addHeadElement("script", array('type' => "text/javascript", 'src' => $this->getPluginURL()."/assets/jquery.cookie.js"), "");
@@ -65,7 +65,7 @@ class StudipTours extends StudIPPlugin implements SystemPlugin {
     
     public function skip_action() {
         if ($GLOBALS["user"]->id !== "nobody" && Request::get("script") && Request::isPost()) {
-            $tour = JoyrideTours::getByScript(Request::get("script"));
+            $tour = Tours::getByScript(Request::get("script"));
             $tour->store();
         }
     }

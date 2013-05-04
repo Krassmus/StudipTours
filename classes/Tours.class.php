@@ -1,13 +1,13 @@
 <?php
 
-class JoyrideTours extends SimpleORMap {
+class Tours extends SimpleORMap {
     
     static public function getByScript($script) {
         $tours = self::findBySQL("user_id = ? AND script = ?", array($GLOBALS['user']->id, $script));
         if (count($tours)) {
             return $tours[0];
         } else {
-            $tour = new JoyrideTours();
+            $tour = new Tours();
             $tour['user_id'] = $GLOBALS['user']->id;
             $tour['script'] = $script;
             return $tour;
@@ -15,7 +15,7 @@ class JoyrideTours extends SimpleORMap {
     }
     
     public function __construct($id = null) {
-        $this->db_table = "joyride_tours";
+        $this->db_table = "tours";
         parent::__construct($id);
     }
 }
