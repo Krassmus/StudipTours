@@ -1,0 +1,21 @@
+msgid "Willkommen im globalen Blubberstream! Hier siehst Du alle Blubber Deiner Buddies, Deiner Gruppen/Veranstaltungen und alle privaten Blubber."
+msgstr "Welcome to your global blubberstream! You can see all blubber of your buddies here as well as of your groups/courses and all private blubbers."
+
+msgid "Was sind Blubber? Das ist eine Mischung aus Posting und Chatnachricht. Hier im globalen Stream vereint sich alles, was Dich interessieren könnte."
+msgstr "What exactly are blubber? It's something between a posting and a chatmessage. In this globalstream you can see all blubber that may be relevant to you."
+
+msgid "Ist noch leer hier, wird aber gleich voller."
+msgstr "Yet it's quite empty here. But we're going to change that soon."
+
+msgid "weiter"
+msgstr "next"
+
+msgid "Okay, ich tippe was ..."
+msgstr "Alright, I'm gonna write something ..."
+
+msgid "Starte Dein neues Leben in der Blubbersphäre mit einem kleinen öffentlichen Posting, in dem Du Dich ganz ganz kurz vorstellst, das aber auf jeden Fall die Zeichenfolge <code>#neuhier</code> beinhaltet."
+msgstr "Start your new life in the blubbersphere with a small public posting. Introduce yourself with a few words and be sure to use the phrase <code>#newhere</code>."
+
+msgid "Wenn Du fertig getippt hast, drücke einfach Enter und wähle \"öffentlich\" als Kontext aus."
+msgstr "When you're ready, hit enter and choose \"public\" as the context of the posting."
+

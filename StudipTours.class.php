@@ -9,8 +9,9 @@ class StudipTours extends StudIPPlugin implements SystemPlugin {
         if ($GLOBALS['user']->id !== "nobody") {
             $tour = $this->getTour();
             if ($tour) {
+                bindtextdomain('tour',dirname(__FILE__).'/locale');
                 $this->initTour($tour);
-                $tourstarter = new Navigation(_("Tour"));
+                $tourstarter = new Navigation(dgettext("tours", "Tour"));
                 $tourstarter->setURL("#");
                 Navigation::insertItem("/links/tour", $tourstarter, "logout");
             }
