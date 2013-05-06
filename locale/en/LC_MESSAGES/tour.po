@@ -2,7 +2,7 @@ msgid "Willkommen im globalen Blubberstream! Hier siehst Du alle Blubber Deiner 
 msgstr "Welcome to your global blubberstream! You can see all blubber of your buddies here as well as of your groups/courses and all private blubbers."
 
 msgid "Was sind Blubber? Das ist eine Mischung aus Posting und Chatnachricht. Hier im globalen Stream vereint sich alles, was Dich interessieren könnte."
-msgstr "What exactly are blubber? It's something between a posting and a chatmessage. In this globalstream you can see all blubber that may be relevant to you."
+msgstr "What exactly are blubbers? It's something between a posting and a chatmessage. In this globalstream you can see all blubber that may be relevant to you."
 
 msgid "Ist noch leer hier, wird aber gleich voller."
 msgstr "Yet it's quite empty here. But we're going to change that soon."
@@ -18,4 +18,17 @@ msgstr "Start your new life in the blubbersphere with a small public posting. In
 
 msgid "Wenn Du fertig getippt hast, drücke einfach Enter und wähle \"öffentlich\" als Kontext aus."
 msgstr "When you're ready, hit enter and choose \"public\" as the context of the posting."
+
+
+msgid "Sehr cool! Arbeiten wir mal weiter daran, dass sich Dein Stream füllt. Du solltest einige Leute finden, die Deine Buddies sind. Wir hoffen jetzt mal, dass es in diesem System so Leute gibt, die da in Frage kommen."
+msgstr "Very nice! Now we should get your stream a little more filled. You should find some people, who you might call buddies. We hope that there are some people around here, that will match this criteria."
+
+msgid "Okay, aber wie?"
+msgstr "Alrighty, but how do I do this?"
+
+msgid "Suche unter \"Kontakte\" nach Personen, die Du kennst und füge sie als Kontakt/Buddy hinzu. Sodann wirst Du deren öffentliche Blubber in Deinem Blubberstream sehen."
+msgstr "At the tab \"Contacts\" you can search for persons who you know, and add them as a contact/buddy. After that you will see their public blubber in your globalstream."
+
+msgid "Alles klar, wird gemacht."
+msgstr "I'll do that."
 

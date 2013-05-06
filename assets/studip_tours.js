@@ -1,6 +1,9 @@
 STUDIP.tours = {
-    start: function () {
-        jQuery("#joyridetour")
+    start: function (id) {
+        if (typeof id === "undefined") {
+            id = "studip_tour";
+        }
+        jQuery("#" + id)
             .appendTo("body")
             .joyride({
                 'autoStart': true,

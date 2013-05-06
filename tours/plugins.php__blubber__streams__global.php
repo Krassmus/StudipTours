@@ -1,4 +1,4 @@
-<ol id="joyridetour" style="display: none;">
+<ol id="studip_tour" style="display: none;">
     <li data-id="nav_community__blubber" data-button="<?= dgettext("tour", "weiter") ?>">
         <?= dgettext("tour", "Willkommen im globalen Blubberstream! Hier siehst Du alle Blubber Deiner Buddies, Deiner Gruppen/Veranstaltungen und alle privaten Blubber.") ?>
         <br><br>
@@ -14,3 +14,23 @@
         <br><br>
     </li>
 </ol>
+
+<ol id="studip_tour_first_posting" style="display: none;">
+    <li data-class="thread" data-button="<?= dgettext("tour", "Okay, aber wie?") ?>">
+        <?= dgettext("tour", "Sehr cool! Arbeiten wir mal weiter daran, dass sich Dein Stream füllt. Du solltest einige Leute finden, die Deine Buddies sind. Wir hoffen jetzt mal, dass es in diesem System so Leute gibt, die da in Frage kommen.") ?>
+        <br><br>
+    </li>
+    <li data-id="nav_community__contacts" data-button="Alles klar, wird gemacht.">
+        <?= dgettext("tour", "Suche unter \"Kontakte\" nach Personen, die Du kennst und füge sie als Kontakt/Buddy hinzu. Sodann wirst Du deren öffentliche Blubber in Deinem Blubberstream sehen.") ?>
+        <br><br>
+    </li>
+</ol>
+
+<script>
+window.setInterval(function () {
+    if (jQuery("#forum_threads.globalstream > li.thread[data-autor='" + jQuery("#user_id").val() + "']").length === 1
+            && jQuery(".joyride-tip-guide:visible").length === 0) {
+        STUDIP.tours.start("studip_tour_first_posting");
+    }
+}, 2000);
+</script>
