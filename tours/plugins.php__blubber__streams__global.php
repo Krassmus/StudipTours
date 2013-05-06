@@ -15,6 +15,7 @@
     </li>
 </ol>
 
+<? if (GetNumberOfBuddies() < 2 && !$GLOBALS['perm']->have_perm("admin")) : ?>
 <ol id="studip_tour_first_posting" style="display: none;">
     <li data-class="thread" data-button="<?= dgettext("tour", "Okay, aber wie?") ?>">
         <?= dgettext("tour", "Sehr cool! Arbeiten wir mal weiter daran, dass sich Dein Stream füllt. Du solltest einige Leute finden, die Deine Buddies sind. Wir hoffen jetzt mal, dass es in diesem System so Leute gibt, die da in Frage kommen.") ?>
@@ -29,8 +30,11 @@
 <script>
 window.setInterval(function () {
     if (jQuery("#forum_threads.globalstream > li.thread[data-autor='" + jQuery("#user_id").val() + "']").length === 1
-            && jQuery(".joyride-tip-guide:visible").length === 0) {
+            && jQuery(".joyride-tip-guide:visible").length === 0
+            && !jQuery("#forum_threads").hasClass("tour_done")) {
         STUDIP.tours.start("studip_tour_first_posting");
+        jQuery("#forum_threads").addClass("tour_done");
     }
 }, 2000);
 </script>
+<? endif ?>
