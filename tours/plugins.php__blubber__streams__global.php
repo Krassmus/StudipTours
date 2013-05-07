@@ -15,13 +15,13 @@
     </li>
 </ol>
 
-<? if (GetNumberOfBuddies() < 2 && !$GLOBALS['perm']->have_perm("admin")) : ?>
-<ol id="studip_tour_first_posting" style="display: none;">
+<? if (GetNumberOfBuddies() < 5 && !Tours::finished("blubber_first_posting")) : ?>
+<ol id="studip_tour_first_posting" style="display: none;" data-tourname="blubber_first_posting">
     <li data-class="thread" data-button="<?= dgettext("tour", "Okay, aber wie?") ?>">
         <?= dgettext("tour", "Sehr cool! Arbeiten wir mal weiter daran, dass sich Dein Stream füllt. Du solltest einige Leute finden, die Deine Buddies sind. Wir hoffen jetzt mal, dass es in diesem System so Leute gibt, die da in Frage kommen.") ?>
         <br><br>
     </li>
-    <li data-id="nav_community__contacts" data-button="Alles klar, wird gemacht.">
+    <li data-id="nav_community__contacts" data-button="Alles klar, wird gemacht." class="studip_tour_first_posting_finish">
         <?= dgettext("tour", "Suche unter \"Kontakte\" nach Personen, die Du kennst und füge sie als Kontakt/Buddy hinzu. Sodann wirst Du deren öffentliche Blubber in Deinem Blubberstream sehen.") ?>
         <br><br>
     </li>
@@ -33,6 +33,9 @@ window.setInterval(function () {
             && jQuery(".joyride-tip-guide:visible").length === 0
             && !jQuery("#forum_threads").hasClass("tour_done")) {
         STUDIP.tours.start("studip_tour_first_posting");
+        jQuery(".studip_tour_first_posting_finish a.joyride-next-tip").live("click", function () {
+            location.href = jQuery("#nav_community__contacts a").attr("href");
+        });
         jQuery("#forum_threads").addClass("tour_done");
     }
 }, 2000);

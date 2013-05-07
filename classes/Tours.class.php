@@ -14,6 +14,10 @@ class Tours extends SimpleORMap {
         }
     }
     
+    static public function finished($script) {
+        return !self::getByScript($script)->isNew();
+    }
+    
     public function __construct($id = null) {
         $this->db_table = "tours";
         parent::__construct($id);
